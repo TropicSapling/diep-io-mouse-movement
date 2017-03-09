@@ -15,16 +15,21 @@ setInterval(function() {
 	
 	var x_change = Math.sin(Math.atan2(distance_x, distance_y));
 	var y_change = Math.cos(Math.atan2(distance_x, distance_y));
+	
+	var x_speed_proto = Math.abs(distance_x) / (window.innerWidth / 4);
+	var y_speed_proto = Math.abs(distance_y) / (window.innerHeight / 4);
+	var x_speed = x_speed_proto < 1 ? x_speed : 1;
+	var y_speed = y_speed_proto < 1 ? y_speed : 1;
 
-	if(x_change * (Math.abs(distance_x) / (window.innerWidth / 2)) < 0 - Math.random()) {
+	if(x_change * x_speed < 0 - Math.random()) {
 		input.keyDown(65);
-    } else if(x_change * (Math.abs(distance_x) / (window.innerWidth / 2)) > Math.random()) {
+    } else if(x_change * x_speed > Math.random()) {
 		input.keyDown(68);
     }
 	
-	if(y_change * (Math.abs(distance_y) / (window.innerHeight / 2)) < 0 - Math.random()) {
+	if(y_change * y_speed < 0 - Math.random()) {
 		input.keyDown(83);
-    } else if(y_change * (Math.abs(distance_y) / (window.innerHeight / 2)) > Math.random()) {
+    } else if(y_change * y_speed > Math.random()) {
 		input.keyDown(87);
     }
 }, 10);
