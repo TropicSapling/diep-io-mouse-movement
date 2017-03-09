@@ -19,7 +19,7 @@ setInterval(function() {
 	if(x_change < 0 - Math.random()) {
 		input.keyDown(65);
     } else if(x_change > Math.random()) {
-		input.keyDown(68);;
+		input.keyDown(68);
     }
 	
 	if(y_change < 0 - Math.random()) {
