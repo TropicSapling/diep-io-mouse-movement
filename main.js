@@ -16,15 +16,15 @@ setInterval(function() {
 	var x_change = Math.sin(Math.atan2(distance_x, distance_y));
 	var y_change = Math.cos(Math.atan2(distance_x, distance_y));
 
-	if(x_change < 0 - Math.random() * 1.5) {
+	if(x_change < 0 - Math.random()) {
 		input.keyDown(65);
-    } else if(x_change > Math.random() * 1.5) {
+    } else if(x_change > Math.random()) {
 		input.keyDown(68);
     }
 	
-	if(y_change < 0 - Math.random() * 1.5) {
+	if(y_change < 0 - Math.random()) {
 		input.keyDown(83);
-    } else if(y_change > Math.random() * 1.5) {
+    } else if(y_change > Math.random()) {
 		input.keyDown(87);
     }
 }, 10);
