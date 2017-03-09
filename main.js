@@ -17,7 +17,7 @@ setInterval(function() {
 	var y_change = Math.cos(Math.atan2(distance_x, distance_y));
 
 	if(x_change < 0 - Math.random() * 1.5) {
-		input.keyDown(65)
+		input.keyDown(65);
     } else if(x_change > Math.random() * 1.5) {
 		input.keyDown(68);
     }
