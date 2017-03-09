@@ -16,15 +16,15 @@ setInterval(function() {
 	var x_change = Math.sin(Math.atan2(distance_x, distance_y));
 	var y_change = Math.cos(Math.atan2(distance_x, distance_y));
 
-	if(x_change * (distance_x / (window.innerWidth / 2)) < 0 - Math.random()) {
+	if(x_change * (Math.abs(distance_x) / (window.innerWidth / 2)) < 0 - Math.random()) {
 		input.keyDown(65);
-    } else if(x_change * (distance_x / (window.innerWidth / 2)) > Math.random()) {
+    } else if(x_change * (Math.abs(distance_x) / (window.innerWidth / 2)) > Math.random()) {
 		input.keyDown(68);
     }
 	
-	if(y_change * (distance_y / (window.innerHeight / 2)) < 0 - Math.random()) {
+	if(y_change * (Math.abs(distance_y) / (window.innerHeight / 2)) < 0 - Math.random()) {
 		input.keyDown(83);
-    } else if(y_change * (distance_y / (window.innerHeight / 2)) > Math.random()) {
+    } else if(y_change * (Math.abs(distance_y) / (window.innerHeight / 2)) > Math.random()) {
 		input.keyDown(87);
     }
 }, 10);
