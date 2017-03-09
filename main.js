@@ -1,3 +1,5 @@
+// PASTE THIS WHOLE FILE INTO CONSOLE TO ACTIVATE
+
 var mouse_x;
 var mouse_y;
 onmousemove = function(e){mouse_x = e.clientX; mouse_y = e.clientY}
