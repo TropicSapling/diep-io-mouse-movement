@@ -18,8 +18,8 @@ setInterval(function() {
 	
 	var x_speed_proto = Math.abs(distance_x) / (window.innerWidth / 4);
 	var y_speed_proto = Math.abs(distance_y) / (window.innerHeight / 4);
-	var x_speed = x_speed_proto < 1 ? x_speed : 1;
-	var y_speed = y_speed_proto < 1 ? y_speed : 1;
+	var x_speed = x_speed_proto < 1 ? x_speed_proto : 1;
+	var y_speed = y_speed_proto < 1 ? y_speed_proto : 1;
 
 	if(x_change * x_speed < 0 - Math.random()) {
 		input.keyDown(65);
