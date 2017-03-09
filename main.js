@@ -10,8 +10,11 @@ setInterval(function() {
 	input.keyUp(83);
 	input.keyUp(87);
 	
-	var x_change = Math.sin(Math.atan2(mouse_x - window.innerWidth / 2, - (mouse_y - window.innerHeight / 2)));
-	var y_change = Math.cos(Math.atan2(mouse_x - window.innerWidth / 2, - (mouse_y - window.innerHeight / 2)));
+	var distance_x = mouse_x - window.innerWidth / 2;
+	var distance_y = 0 - (mouse_y - window.innerHeight / 2);
+	
+	var x_change = Math.sin(Math.atan2(distance_x, distance_y));
+	var y_change = Math.cos(Math.atan2(distance_x, distance_y));
 
 	if(x_change < 0 - Math.random() * 1.5) {
 		input.keyDown(65)
