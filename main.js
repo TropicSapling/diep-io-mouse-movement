@@ -23,10 +23,10 @@ oncontextmenu = function() {
 }
 
 setInterval(function() {
-	input.keyUp(65);
-	input.keyUp(68);
-	input.keyUp(83);
-	input.keyUp(87);
+	input.keyUp(key_UP);
+	input.keyUp(key_LEFT);
+	input.keyUp(key_DOWN);
+	input.keyUp(key_RIGHT);
 	
 	var distance_x = mouse_x - window.innerWidth / 2;
 	var distance_y = 0 - (mouse_y - window.innerHeight / 2);
@@ -40,14 +40,14 @@ setInterval(function() {
 	var y_speed = y_speed_proto < 1 ? y_speed_proto : 1;
 
 	if(x_change * x_speed < 0 - Math.random()) {
-		input.keyDown(65);
+		input.keyDown(key_LEFT);
     } else if(x_change * x_speed > Math.random()) {
-		input.keyDown(68);
+		input.keyDown(key_RIGHT);
     }
 	
 	if(y_change * y_speed < 0 - Math.random()) {
-		input.keyDown(83);
+		input.keyDown(key_DOWN);
     } else if(y_change * y_speed > Math.random()) {
-		input.keyDown(87);
+		input.keyDown(key_UP);
     }
 }, 10);
