@@ -8,7 +8,19 @@ var key_DOWN = 83;
 var key_RIGHT = 68;
 
 onmousemove = function(e){mouse_x = e.clientX; mouse_y = e.clientY}
-oncontextmenu = function(){key_UP = 83; key_LEFT = 68; key_DOWN = 87; key_RIGHT = 65}
+oncontextmenu = function() {
+	if(key_UP == 87) {
+		key_UP = 83;
+		key_LEFT = 68;
+		key_DOWN = 87;
+		key_RIGHT = 65;
+	} else {
+		key_UP = 87;
+		key_LEFT = 65;
+		key_DOWN = 83;
+		key_RIGHT = 68;
+	}
+}
 
 setInterval(function() {
 	input.keyUp(65);
